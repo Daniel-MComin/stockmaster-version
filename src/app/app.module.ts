@@ -10,13 +10,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { EstoqueModule } from './estoque/estoque.module';
-import { ReactiveFormsModule } from '@angular/forms';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { PopUpComponent } from './pop-up/pop-up.component';
-import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTreeModule } from '@angular/material/tree'
-import { MaterialModule } from './shared/material/material.module';
 import { ToastrModule } from 'ngx-toastr';
 
 
@@ -34,7 +29,8 @@ import { ToastrModule } from 'ngx-toastr';
     EstoqueModule, 
     ReactiveFormsModule,
     MatTreeModule, 
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()

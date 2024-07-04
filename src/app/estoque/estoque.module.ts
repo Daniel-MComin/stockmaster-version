@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -23,7 +24,9 @@ import { HomeComponent } from '../home/home.component';
     CommonModule,
     EstoqueRoutingModule,
     MaterialModule,
-    SharedModule
+    SharedModule, 
+    FormsModule, 
+    ReactiveFormsModule
   ]
 })
 export class EstoqueModule { }

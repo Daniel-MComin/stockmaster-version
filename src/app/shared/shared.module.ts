@@ -4,23 +4,23 @@ import { CommonModule } from '@angular/common';
 import { AlertsComponent } from './alerts/alerts.component';
 import { MaterialModule } from './material/material.module';
 import { CategoryPipe } from './pipes/category.pipe'; 
-import { AuthService } from './services/auth.service';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [ 
      AlertsComponent,
-     CategoryPipe],
+     CategoryPipe
+    ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   exports: [
     AlertsComponent,
-    CategoryPipe
-  ],
-  providers: [
-    AuthService
+    CategoryPipe,
   ]
 })
 export class SharedModule { }

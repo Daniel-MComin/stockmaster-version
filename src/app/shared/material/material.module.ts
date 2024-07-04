@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
-import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   exports: [
@@ -20,7 +20,6 @@ import { ToastrModule } from 'ngx-toastr';
     MatProgressSpinnerModule,
     MatDialogModule,
     MatInputModule,
-    
   ],
   
 })

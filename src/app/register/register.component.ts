@@ -20,21 +20,21 @@ export class RegisterComponent {
     ){}
 
   registerForm = this.builder.group({
-    id: this.builder.control([''], [Validators.required, Validators.minLength(5)]),
-    name: this.builder.control([''], [Validators.required]),
-    password: this.builder.control([''], [Validators.required, Validators.minLength(6)]),
-    email: this.builder.control([''], [Validators.required, Validators.email])
-  })
+    id: ['', Validators.required],
+    name: ['', [Validators.required, Validators.minLength(4)]],
+    password:['', [Validators.required, Validators.minLength(6)]],
+    email: ['', [Validators.required, Validators.email]]
+  });
 
   register(){
-    if(this.registerForm.valid){
+  if(this.registerForm.valid){
       this.service.makeRegister(this.registerForm.value).subscribe(result =>
         {
           this.toastr.success('Usuário registrado com sucesso');
-          this.router.navigate(['estoque']);
+          this.router.navigate(['login']);
         });
     } else {
-      this.toastr.warning('Por favor digite dados válidos!')
+      this.toastr.warning('Por favor digite dados válidos!');
     }
   }
 }
