@@ -16,6 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { MatTable } from '@angular/material/table';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +28,11 @@ import { MatTable } from '@angular/material/table';
     MatIconModule,
     MatButtonModule,
     HttpClientModule,
-    EstoqueModule, 
     ReactiveFormsModule,
     MatTreeModule, 
     ToastrModule.forRoot(),
     FormsModule, 
-    MatTable
+    MatTable,
   ],
   providers: [
     provideAnimationsAsync()

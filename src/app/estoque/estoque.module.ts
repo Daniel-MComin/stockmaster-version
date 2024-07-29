@@ -12,6 +12,7 @@ import { LoginComponent } from '../login/login.component';
 import { PopUpComponent } from '../pop-up/pop-up.component';
 import { HomeComponent } from '../home/home.component';
 import { UserListComponent } from '../user-list/user-list.component';
+import { EditAddComponent } from './edit-add/edit-add.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserListComponent } from '../user-list/user-list.component';
     LoginComponent,
     PopUpComponent,
     HomeComponent,
-    UserListComponent
+    UserListComponent,
+    EditAddComponent 
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,7 @@ import { UserListComponent } from '../user-list/user-list.component';
     MaterialModule,
     SharedModule, 
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class EstoqueModule { }

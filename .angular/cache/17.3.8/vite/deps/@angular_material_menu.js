@@ -4,10 +4,10 @@ import {
   OverlayConfig,
   OverlayModule,
   TemplatePortal
-} from "./chunk-3Q6S47FD.js";
+} from "./chunk-XVWS4RB5.js";
 import {
   CdkScrollableModule
-} from "./chunk-J7BVQGT7.js";
+} from "./chunk-VLEHBEOA.js";
 import "./chunk-MTHGI3LI.js";
 import {
   animate,
@@ -15,7 +15,12 @@ import {
   style,
   transition,
   trigger
-} from "./chunk-3SXPAJX2.js";
+} from "./chunk-KD3LE2VQ.js";
+import {
+  MatCommonModule,
+  MatRipple,
+  MatRippleModule
+} from "./chunk-GYKOVQD4.js";
 import {
   DOWN_ARROW,
   Directionality,
@@ -24,9 +29,6 @@ import {
   FocusKeyManager,
   FocusMonitor,
   LEFT_ARROW,
-  MatCommonModule,
-  MatRipple,
-  MatRippleModule,
   RIGHT_ARROW,
   SPACE,
   UP_ARROW,
@@ -34,7 +36,7 @@ import {
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   normalizePassiveListenerOptions
-} from "./chunk-IL2YEQRI.js";
+} from "./chunk-2ELDQKXP.js";
 import {
   CommonModule,
   DOCUMENT

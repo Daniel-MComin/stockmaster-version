@@ -3,6 +3,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../shared/services/auth.service';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-login',
@@ -15,7 +17,9 @@ export class LoginComponent {
     private builder: FormBuilder,
     private toastr: ToastrService,
     private service: AuthService ,
-    private router: Router
+    private router: Router,
+    private location: Location
+
     ){
       sessionStorage.clear()
     }
@@ -48,5 +52,8 @@ export class LoginComponent {
         }
       }
 
+      back(){
+        this.location.back()
+      }
 
 }

@@ -28,13 +28,25 @@
   "role": [
     {
       "code": "admin",
-      "name": "Admin",
-      "id": "d6c7"
+      "name": "Admin"
     },
     {
       "code": "staff",
-      "name": "Staff",
-      "id": "0dd3"
+      "name": "Staff"
+    }
+  ],
+  "estoque": [
+    {
+      "id": "f1af",
+      "name": "aaaaaaaa",
+      "category": "aaaaaaaaaaaaa",
+      "brand": "aaaaaaa"
+    },
+    {
+      "id": "9a25",
+      "name": "ssssssss",
+      "category": "ssssssssssss",
+      "brand": "ssssssss"
     }
   ]
 }

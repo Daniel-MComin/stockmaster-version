@@ -5,6 +5,7 @@ import { AuthService } from '../shared/services/auth.service';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -39,4 +40,6 @@ export class RegisterComponent {
       this.toastr.warning('Por favor digite dados válidos!');
     }
   }
+
+  
 }

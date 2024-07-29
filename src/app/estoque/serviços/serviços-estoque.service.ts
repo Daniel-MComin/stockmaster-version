@@ -9,7 +9,7 @@ import { delay, take, tap } from 'rxjs';
 })
 
 export class ServiçosEstoqueService {
-  private readonly API = '/assets/estoque.json';
+  private readonly API = 'http://localhost:3000/estoque';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -17,18 +17,30 @@ export class ServiçosEstoqueService {
     return this.httpClient.get<Estoque[]>(this.API)
     .pipe(
       take(1),
-      delay(2000),
+      delay(1000),
       tap(estoques => {console.log(estoques)
       }),
     )
   }
+
   loadById(id:any){
     return this.httpClient.get(`${this.API}/${id}`).pipe(take(1));
   }
 
   create(curso:string){
-   return this.httpClient.post<Estoque>(this.API, curso).pipe(take(1))
+   return this.httpClient.post<Estoque>(this.API, curso).pipe(take(1));
   }
    
+  addProduct(data:any) {
+    return this.httpClient.post(this.API, data);
+  }
+
+  deleteProduct(id:number){
+    return this.httpClient.delete(`${this.API}/${id}`)
+  }
+  
+  updateProduct(id: any, data: any){
+    return this.httpClient.put(`${this.API}/${id}`, data)
+  }
 }
  
