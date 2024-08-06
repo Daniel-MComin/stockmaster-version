@@ -8,7 +8,7 @@
 
 .example-container {
     width: 100vw;
-    height: 92vh;
+    height: 93vh;
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
   
@@ -20,11 +20,12 @@
   }
   
   .example-sidenav {
-    padding: 20px;
+    padding: 30px;
+    gap: 20px;
   }
 
   .button-space {
-    padding: 6px;
+    padding: 5px;
   }
 
   .flex{
@@ -34,10 +35,17 @@
     justify-content: center;
   }
 
-.button{
-  width: 14rem
+  .button{
+  width: 16rem;
+  height: 3rem;
 }
 
-.arrow-left:focus {
+  .flex-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .arrow-left:focus {
   transform: rotate(180deg);
 }

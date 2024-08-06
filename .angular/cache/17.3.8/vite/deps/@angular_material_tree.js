@@ -3,11 +3,9 @@ import {
   isDataSource
 } from "./chunk-MTHGI3LI.js";
 import {
+  Directionality,
   MatCommonModule
-} from "./chunk-GYKOVQD4.js";
-import {
-  Directionality
-} from "./chunk-2ELDQKXP.js";
+} from "./chunk-L6BABRDZ.js";
 import "./chunk-V4I6KYGB.js";
 import {
   Attribute,

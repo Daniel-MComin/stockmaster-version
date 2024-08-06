@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../shared/services/auth.service';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
 
 
 @Component({
@@ -17,8 +16,7 @@ export class LoginComponent {
     private builder: FormBuilder,
     private toastr: ToastrService,
     private service: AuthService ,
-    private router: Router,
-    private location: Location
+    private router: Router
 
     ){
       sessionStorage.clear()
@@ -38,11 +36,15 @@ export class LoginComponent {
              this.userData = result
              console.log(result)
              if(this.userData.password === this.loginForm.value.password){
+              if(this.userData.status){
                 sessionStorage.setItem('username', this.userData.id);
                 sessionStorage.setItem('role', this.userData.role);
                 console.log(this.userData.role)
                 this.router.navigate(['']);
                 this.toastr.success('Login realizado com sucesso!')
+              } else {
+                this.toastr.error('Por favor contate o Administrador.', 'Usuário Inativo')
+              }             
              } else {
               this.toastr.error('Usuário ou senha incorretos!')
              }
@@ -51,9 +53,4 @@ export class LoginComponent {
           this.toastr.error('Por favor digite dados válidos!')
         }
       }
-
-      back(){
-        this.location.back()
-      }
-
 }

@@ -1,13 +1,11 @@
 import { MatTableDataSource } from '@angular/material/table';
-import { Component, OnInit, ViewChild, viewChild } from '@angular/core';
-
-import { Estoque } from '../models/estoque';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { ServiçosEstoqueService } from '../serviços/serviços-estoque.service';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { AlertsComponent } from '../../shared/alerts/alerts.component';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { EditAddComponent } from '../edit-add/edit-add.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -26,7 +24,7 @@ export class EstoqueComponent implements OnInit{
   submitted: boolean = false;
   estoque$: Observable <any>;
   
-  displayedColumns = ['id','name','brand', 'category', 'actions'];
+  displayedColumns = ['id','name','brand','quantity','category', 'actions'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -35,8 +33,6 @@ export class EstoqueComponent implements OnInit{
     public dialog: MatDialog,
     private builder: FormBuilder,
     private toastr: ToastrService){
-   
-    this.getProductList();
    
   }
 

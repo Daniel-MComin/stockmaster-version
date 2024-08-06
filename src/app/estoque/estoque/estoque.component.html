@@ -23,7 +23,6 @@
         <td mat-cell *matCellDef="let estoque"> {{ estoque.id }} </td>
       </ng-container>
     
-      
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Produto </th>
         <td mat-cell *matCellDef="let estoque"> {{ estoque.name }} </td>
@@ -32,6 +31,11 @@
       <ng-container matColumnDef="brand">
         <th mat-header-cell *matHeaderCellDef> Marca </th>
         <td mat-cell *matCellDef="let estoque"> {{ estoque.brand }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+        <td mat-cell *matCellDef="let estoque"> {{ estoque.quantity }} </td>
       </ng-container>
     
       

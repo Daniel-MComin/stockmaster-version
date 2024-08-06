@@ -23,30 +23,93 @@
       "email": "teste1@email.com",
       "role": "staff",
       "status": false
+    },
+    {
+      "id": "staff",
+      "name": "Staff da silva",
+      "password": "123456",
+      "email": "staff@email.com",
+      "role": "staff",
+      "status": false
     }
   ],
   "role": [
     {
       "code": "admin",
-      "name": "Admin"
+      "name": "Admin",
+      "id": "4a9c"
     },
     {
       "code": "staff",
-      "name": "Staff"
+      "name": "Staff",
+      "id": "1bd8"
     }
   ],
   "estoque": [
     {
-      "id": "f1af",
-      "name": "aaaaaaaa",
-      "category": "aaaaaaaaaaaaa",
-      "brand": "aaaaaaa"
+      "name": "Notebook",
+      "category": "Eletrônico",
+      "brand": "Dell",
+      "quantity": "11",
+      "id": "6862"
     },
     {
-      "id": "9a25",
-      "name": "ssssssss",
-      "category": "ssssssssssss",
-      "brand": "ssssssss"
+      "id": "6022",
+      "name": "Televisão",
+      "category": "Eletrônico",
+      "brand": "Philco",
+      "quantity": "3"
+    },
+    {
+      "id": "460b",
+      "name": "Câmera",
+      "category": "Eletrônico",
+      "brand": "Samsung",
+      "quantity": "2"
+    },
+    {
+      "id": "39fc",
+      "name": "Camisa",
+      "category": "Vestimenta",
+      "brand": "Renner",
+      "quantity": "43"
+    },
+    {
+      "id": "6eb8",
+      "name": "Arroz",
+      "category": "Alimento",
+      "brand": "Arroz",
+      "quantity": "33"
+    },
+    {
+      "id": "efd5",
+      "name": "Cadeira",
+      "category": "Móvel",
+      "brand": "Pichau",
+      "quantity": "2"
+    }
+  ],
+  "category": [
+    {
+      "name": "Eletrônico"
+    },
+    {
+      "name": "Alimento"
+    },
+    {
+      "name": "Hospitalar"
+    },
+    {
+      "name": "Medicamento"
+    },
+    {
+      "name": "Móvel"
+    },
+    {
+      "name": "Decoração"
+    },
+    {
+      "name": "Vestimenta"
     }
   ]
 }

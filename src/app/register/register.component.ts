@@ -33,7 +33,7 @@ export class RegisterComponent {
   if(this.registerForm.valid){
       this.service.makeRegister(this.registerForm.value).subscribe(result =>
         {
-          this.toastr.success('Usuário registrado com sucesso');
+          this.toastr.success('Contate o Administrador para ativar acesso.','Usuário registrado com sucesso');
           this.router.navigate(['login']);
         });
     } else {
