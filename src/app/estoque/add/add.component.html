@@ -1,0 +1,37 @@
+
+<div mat-dialog-title>
+    <h1>Adicionar Produto</h1>
+</div>
+<form [formGroup]="estoqueForm" (ngSubmit)="onSubmit()">
+<div mat-dialog-content class="content">
+    <div class="row">
+    <mat-form-field class="example-form" appearance="outline">
+        <mat-label>Produto</mat-label>
+        <input matInput placeholder="Ex. Notebook" formControlName="name">
+      </mat-form-field>
+      <mat-form-field class="example-form" appearance="outline">
+        <mat-label>Marca</mat-label>
+        <input matInput formControlName="brand">
+      </mat-form-field>
+      <mat-form-field class="example-form" appearance="outline">
+        <mat-label>Quantidade</mat-label>
+        <input matInput formControlName="quantity">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-select placeholder="Selecione uma Categoria" formControlName="category">
+              <mat-option *ngFor="let item of categoryList" [value]="item.name">
+                {{ item.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+</div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button color="primary" type="submit">Salvar</button>
+    <button mat-raised-button [mat-dialog-close]="false" type="button">Sair</button>
+</div>
+</form>
+
